@@ -61,10 +61,10 @@ export default function RestaurantCard({restaurant}) {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="Edit This Restaurant" title="Edit this Restaurant" onClick={handleOpenEditModal}>
+          <IconButton aria-label="Edit This Restaurant" title="Edit this Restaurant" color="secondary" onClick={handleOpenEditModal}>
             <Edit />
           </IconButton>
-          <IconButton aria-label="Delete This Restaurant" title="Delete This Restaurant" color={red[500]} onClick={handleOpenDeleteModal}>
+          <IconButton aria-label="Delete This Restaurant" title="Delete This Restaurant" color="error" onClick={handleOpenDeleteModal}>
             <Delete />
           </IconButton>
           <ExpandMore

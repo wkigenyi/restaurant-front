@@ -23,7 +23,7 @@ export default function EditRestaurantForm({onClose,restaurant}){
             body:JSON.stringify(changes),
             headers:{"Content-Type":"application/json"}
         }).then(
-            res => res.json().then(data => dispatch({payload:data,type:"CREATE_RESTAURANT"})),
+            res => res.json().then(data => {dispatch({payload:data,type:"CREATE_RESTAURANT"}); onClose()}),
             error => {setErrors(error); console.log(error); onClose()}
         )
     }
@@ -38,7 +38,7 @@ export default function EditRestaurantForm({onClose,restaurant}){
         body:JSON.stringify(changes),
         headers:{"Content-Type":"application/json"}
     }).then(
-        res => res.json().then(data => dispatch({payload:data,type:"UPDATE_RESTAURANT"})),
+        res => res.json().then(data => {dispatch({payload:data,type:"UPDATE_RESTAURANT"}); onClose()}),
         error => {setErrors(error); console.log(error); onClose()}
     )
     
