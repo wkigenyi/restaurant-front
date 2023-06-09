@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# The Restaurant App front end
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The front end of the restaurant app is written in JavaScript (REACT)
 
-## Available Scripts
+## How to run locally
 
-In the project directory, you can run:
+Clone this repo and install the dependencies by running:
+
+### `yarn install`
+
+Before running the app in dev mode make sure the backend is running on a port that is the same as as the on which the front end will run. For example you can run the backend on port 4000 and run the front end on the default port of 3000\
+
+The repo for the backend is [https://github.com/wkigenyi/restaurants-backend](https://github.com/wkigenyi/restaurants-backend) and instructions to set it and included within the repo's readme.
+
+Once the backend is running note, the port on which it is running for example 4000\
+Ensure to set the project proxy to that server in package.json for example: "proxy":["http://localhost:4000"]("http://localhost:4000"),.
 
 ### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The command will start the frontend application on port 3000.\
+The app can be accessed by pointing  the browser to ["http://localhost:3000"]("http://localhost:3000")
+If port 3000 is not available for use:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `yarn start -p <PORT>`
 
-### `yarn test`
+The command will start the frontend application on port 3000.\
+The app can be accessed by pointing  the browser to ["http://localhost:<PORT>"]("http://localhost:<PORT>")
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Adding A Restaurant`
 
-### `yarn build`
+The application has to main visible parts, the AppBar which has a button on the right to add a new restaurant and the main content area which show the restaurants that have been added to the database.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+On each of the restaurants there buttons on which the user can click to delete or update that particular restaurant.
