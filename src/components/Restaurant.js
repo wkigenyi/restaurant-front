@@ -1,6 +1,5 @@
 import { Delete, Edit, ExpandLess, Restaurant } from "@mui/icons-material";
 import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Collapse, IconButton, Typography, styled } from "@mui/material";
-import { red } from "@mui/material/colors";
 import { useState } from "react";
 import DeleteRestaurantModal from "./DeleteRestaurantModal";
 import EditRestaurantModal from "./EditRestaurantModal";
