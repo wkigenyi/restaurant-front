@@ -22,7 +22,7 @@ export default function Restaurants(){
     return (
         <Box padding={3}>
       <Grid container spacing={3}>
-        {(restaurants || []).map(a => <Grid item key={a._id} lg={3} sm={12}>
+        {(restaurants || []).map((a,i) => <Grid item key={i} lg={3} sm={12}>
           <RestaurantCard restaurant={a}/>
         </Grid>)}
         
