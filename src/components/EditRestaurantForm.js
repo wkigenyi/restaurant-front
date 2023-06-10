@@ -96,7 +96,8 @@ export default function EditRestaurantForm({onClose,restaurant}){
               name="name"
               required
               onChange={(e) =>setChanges({...changes,name: e.target.value})}
-              value={restaurant ? changes.name || restaurant.name : changes.name?changes.name : "" }
+              defaultValue={restaurant?restaurant.name:""}
+              value={changes.name }
               
             />
             <TextField
@@ -105,7 +106,8 @@ export default function EditRestaurantForm({onClose,restaurant}){
               name="location"
               required
               onChange={(e) =>setChanges({...changes,location: e.target.value})}
-              value={restaurant ? changes.location || restaurant.location : changes.location?changes.location : "" }
+              defaultValue={restaurant?restaurant.location:""}
+              value={changes.location}
               
             />
             <TextField
@@ -113,8 +115,9 @@ export default function EditRestaurantForm({onClose,restaurant}){
               label="Cuisine"
               name="cuisine"
               required
+              defaultValue={restaurant?restaurant.cuisine:""}
               onChange={(e) =>setChanges({...changes,cuisine: e.target.value})}
-              value={restaurant ? changes.cuisine || restaurant.cuisine : changes.cuisine?changes.cuisine : "" }
+              value={changes.cuisine}
             />
             <Button variant="outlined" size="large" component="label" startIcon={<Image/>}>
                 <input 
